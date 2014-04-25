@@ -1,0 +1,43 @@
+#hacks { margin-top: 20px;}
+
+.hack
+{
+  margin-bottom: 20px;
+  overflow: auto;
+
+  h3 
+  { 
+    margin-top: 0; 
+    margin-bottom: 0;
+  }
+}
+
+.edit-hackday
+{
+  color: #bbb;
+  font-size: 0.8em;
+}
+
+// Presentation Queue
+.queue-buttons { margin-top: 5px; }
+
+// Main nav
+.nav-pills li a { padding: 5px; }
+
+.add-hack { text-align: right; }
+.add-hack-mobile
+{
+  text-align: center;
+
+  button
+  {
+    width: 75px; height: 75px;
+    border-radius: 75px;
+    font-size: 3em;
+    text-align: center;
+  }
+}
+
+// Front page
+.hackdays { margin-bottom: 3em; }
+.hackday h3 { margin-bottom: 0; }
