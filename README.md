@@ -1,6 +1,7 @@
 This is the tool we use at Yammer to keep track of our epic hack days
 
-== What this thing does ==
+What this thing does
+-----------------------------
 
 Track your company's hack days. 
 
@@ -8,7 +9,8 @@ Track your company's hack days.
 * Judges can make private comments and move things up and down in the presentation queue
 
 
-== Setting up Authentication ==
+Setting up Authentication
+------------------------------------
 
 We use Omniauth (link) - this app is set up to use either Github or Yammer for auth, but it should be pretty straight forward to use another provider - check out the OmniAuth docs (link)
 
@@ -19,7 +21,8 @@ We use Omniauth (link) - this app is set up to use either Github or Yammer for a
 5. Deploy your app
 6. There is no step 6
 
-== Anticipated Questions ==
+Anticipated Questions
+--------------------------------
 
 Q: This code is terrible - was it written by a PM?
 A: Yes.
