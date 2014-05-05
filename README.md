@@ -1,6 +1,7 @@
-This is the tool we use at Yammer to keep track of our epic hack days
+This is the tool we use at Yammer to keep track of our [epic hack days](http://eng.yammer.com/tag/hack-day/).
 
-== What this thing does ==
+What this thing does
+-----------------------------
 
 Track your company's hack days. 
 
@@ -8,18 +9,20 @@ Track your company's hack days.
 * Judges can make private comments and move things up and down in the presentation queue
 
 
-== Setting up Authentication ==
+Setting up Authentication
+------------------------------------
 
-We use Omniauth (link) - this app is set up to use either Github or Yammer for auth, but it should be pretty straight forward to use another provider - check out the OmniAuth docs (link)
+We use [Omniauth](https://github.com/intridea/omniauth) - this app is set up to use either Github or Yammer for auth, but it should be pretty straight forward to use another provider - check out the [OmniAuth docs](https://github.com/intridea/omniauth/wiki)
 
 1. Figure out the URL you're going to use to host this
-2. Go to the developer page for Github (link) or Yammer (link) and create a new app - name it and give it a good description so people don't freak out when they're asked to give your site permission
+2. Go to the developer page for [Github](https://developer.github.com/) or [Yammer](http://developer.yammer.com/) and create a new app - name it and give it a good description so people don't freak out when they're asked to give your site permission
 3. Edit omniauth.rb and fill in your key and secret
 4. Edit settings.yml to include the (this just sets some stuff in the UI)
 5. Deploy your app
 6. There is no step 6
 
-== Anticipated Questions ==
+Anticipated Questions
+--------------------------------
 
 Q: This code is terrible - was it written by a PM?
 A: Yes.
