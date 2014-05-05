@@ -17,7 +17,7 @@ require 'capybara/rails'
 Capybara.javascript_driver = :webkit
 
 OmniAuth.config.test_mode = true
-OmniAuth.config.mock_auth[:yammer] = {
+OmniAuth.config.mock_auth[:default] = {
     provider: 'yammer',
     uid: '123',
     info: { 
