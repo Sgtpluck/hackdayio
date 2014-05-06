@@ -52,14 +52,14 @@ ActiveRecord::Schema.define(:version => 20140327043648) do
 
   create_table "hacks", :force => true do |t|
     t.string   "title"
-    t.text     "description",        :limit => 255
-    t.integer  "votes",                             :default => 0
+    t.text     "description"
+    t.integer  "votes",              :default => 0
     t.string   "url"
-    t.datetime "created_at",                                         :null => false
-    t.datetime "updated_at",                                         :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
     t.integer  "presentation_index"
-    t.text     "upvoted_by",                        :default => "'"
-    t.text     "downvoted_by",                      :default => "'"
+    t.text     "upvoted_by",         :default => "--- []\n"
+    t.text     "downvoted_by",       :default => "--- []\n"
     t.integer  "hackday_id"
   end
 
