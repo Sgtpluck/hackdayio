@@ -18,8 +18,26 @@
 require 'spec_helper'
 
 describe Hack do
-  
-  it "should require a title and description"
+  before do
+    @hack = Fabricate(:hack)
+  end
+
+  it 'should be valid' do
+    expect(@hack).to be_valid
+  end
+
+  it "should require a title" do
+    @hack.title = nil
+
+    expect(@hack).to_not be_valid
+  end
+
+  it "should require a description" do
+    @hack.title = nil
+
+    expect(@hack).to_not be_valid
+  end
+
   it "should handle voting with dignity and grace"
 
 end

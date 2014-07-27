@@ -1,6 +1,12 @@
 .hack.row
   .col-xs-2.col-sm-1
-    = render partial: 'hacks/voting', locals: { hack: hack }
+    - if current_user_hack?(hack)
+      .hack-voting
+        = image_tag('arrow-up.png', class: 'self-vote')
+        %span.votes= hack.votes
+        = image_tag('arrow-down.png', class: 'self-vote')
+    - else
+      = render partial: 'hacks/voting', locals: { hack: hack }
   .hack-details.col-xs-10.col-sm-11
     %h3
       = link_to hack.title, hack

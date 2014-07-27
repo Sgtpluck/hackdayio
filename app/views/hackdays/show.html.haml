@@ -1,11 +1,9 @@
 .col-md-8
-  - if @hackday.has_admin?(current_user)
-    %h2
-      = @hackday.title
+  %h2
+    = @hackday.title
+    - if @hackday.has_admin?(current_user)
       = link_to '#', class: 'edit-hackday', 'data-toggle' => 'modal', 'data-target' => '#hackday-form' do
         %span.glyphicon.glyphicon-cog
-  - else
-    %h2= @hackday.title
   .row
     .col-md-6
       %ul.nav.nav-pills

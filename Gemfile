@@ -37,10 +37,17 @@ gem 'omniauth-github'
 group :development, :test do
   gem 'debugger' 
   gem 'sqlite3'
+  gem 'pry'
 
   gem 'rspec-rails'
   gem 'annotate'
   gem 'simplecov'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets' # Don't log assets in dev
 end
 
 group :test do

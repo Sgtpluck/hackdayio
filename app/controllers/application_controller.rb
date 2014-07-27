@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    return User.first if Rails.env.development?
+    # return User.first if Rails.env.development?
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
   helper_method :current_user
@@ -28,5 +28,10 @@ class ApplicationController < ActionController::Base
       return redirect_to :back
     end
   end
+
+  def current_user_hack?(hack)
+    hack.contributors.include?(current_user)
+  end
+  helper_method :current_user_hack?
   
 end

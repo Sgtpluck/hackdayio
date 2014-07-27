@@ -36,7 +36,7 @@ class HacksController < ApplicationController
     @hack.update_attributes(params[:hack])
     if @hack.errors.any?
       flash[:error] = @hack.errors.full_messages.join(", ")
-      redirect_to edit_hack_path(@hack)
+      redirect_to hack_path(@hack)
     else
       flash[:message] = "Update successful!"
       redirect_to hack_path(@hack)

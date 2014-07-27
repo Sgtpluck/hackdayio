@@ -13,13 +13,25 @@
 require 'spec_helper'
 
 describe Hackday do
-
-  it "has a valid fabricator" do
-    Fabricate(:hackday).should be_valid
+  before do
+    @hackday = Fabricate(:hackday)
   end
 
-  it "requires a title"
-  it "requires a date"
+  it "has a valid fabricator" do
+    expect(@hackday).to be_valid
+  end
+
+  it "requires a title" do
+    @hackday.title = nil
+
+    expect(@hackday).to be_invalid
+  end
+
+  it "requires a date" do
+    @hackday.date = nil
+
+    expect(@hackday).to be_invalid
+  end
 
   describe "queue behavior" do
 
